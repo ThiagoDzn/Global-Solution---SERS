@@ -1,90 +1,99 @@
-📄 RELATÓRIO EXPLICATIVO – GLOBAL SOLUTION 2025
+# 📄 Relatório – Global Solution 2025
+## Análise de Consumo Energético – Subsistema Sudeste (SE/CO)
 
-📌 Análise de Consumo Energético do Subsistema Sudeste e Proposta de Otimização Baseada em Dados
+---
 
-1. Introdução
+## 🏁 1. Introdução
+O consumo de energia elétrica é um dos principais fatores que impactam diretamente os custos operacionais e o equilíbrio ambiental no Brasil. Monitorar padrões de uso e identificar desperdícios é essencial para garantir eficiência e sustentabilidade.
 
-O consumo de energia elétrica é um dos principais fatores que impactam diretamente os custos operacionais de empresas e também o equilíbrio ambiental. Entender padrões de consumo e identificar desperdícios é essencial para desenvolver estratégias eficientes e sustentáveis.
+Este projeto analisou o consumo energético do subsistema **Sudeste (SE)** durante o ano de 2023, utilizando dados públicos do ONS. Por meio de técnicas de análise exploratória e detecção de picos de consumo, foi possível propor ações concretas para redução de gastos e otimização do uso da energia.
 
-Este estudo analisou o comportamento do consumo energético do subsistema Sudeste (SE/CO) ao longo de 2023, utilizando dados públicos disponibilizados pelo Operador Nacional do Sistema Elétrico (ONS). O objetivo foi identificar períodos críticos de demanda, classificar picos de consumo e propor ações capazes de reduzir consumo sem afetar desempenho e produtividade.
+---
 
-2. Metodologia
+## 🔎 2. Objetivo Geral
+Identificar padrões de consumo energético e propor uma solução de otimização baseada em dados, visando **eficiência operacional, sustentabilidade e redução de custos**.
 
-Os dados foram importados, tratados e analisados utilizando Python e bibliotecas de análise de dados (Pandas, Matplotlib e Seaborn). As etapas realizadas:
+**Objetivos específicos**
+- Identificar horários de maior e menor consumo
+- Comparar consumo entre dias úteis e finais de semana
+- Detectar picos com base estatística
+- Simular impacto de redução estratégica em horários críticos
 
-Etapas do processo
+---
 
-Coleta dos dados de consumo elétrico horário
+## 🧠 3. Metodologia
+A análise foi realizada utilizando **Python**, **Pandas** e **Matplotlib** em ambiente **Google Colab**. As etapas executadas foram:
 
-Filtragem do subsistema Sudeste (SE/CO)
+1. Importação do dataset bruto
+2. Filtro para o subsistema Sudeste – **id_subsistema = SE/CO**
+3. Conversão e organização das colunas de data/hora
+4. Criação de variáveis adicionais (hora, dia da semana, tipo de dia, kWh)
+5. Visualização gráfica dos padrões de consumo
+6. Detecção automática de picos utilizando o critério estatístico:
+7. Simulação de economia reduzindo **15% do consumo nos horários de pico**
 
-Criação de novas variáveis (hora, mês, tipo de dia, kWh etc.)
+---
 
-Detecção automática de picos com base em limite estatístico:
+## 📊 4. Resultados Obtidos
 
-média + 1.5 × desvio padrão
+### ⚡ Comportamento horário de consumo
+- **Pico de consumo:** entre **18h e 20h**
+- **Menor consumo:** entre **03h e 05h**
 
+### 📅 Comparação dias úteis × finais de semana
+- Dias úteis apresentam carga significativamente maior no período comercial.
+- Final de semana mantém consumo elevado no período noturno → indicativo de **desperdício energético**.
 
-Comparação entre dias úteis e finais de semana
+### 🚨 Detecção de picos
+| Indicador | Valor |
+|-----------|--------|
+| Quantidade de picos detectados | **568 eventos** |
+| Horário predominante | **18h–21h** |
 
-Simulação de redução de consumo em horários críticos
+---
 
-3. Resultados Obtidos
-3.1 Comportamento horário
+## 💡 5. Proposta de Solução
+Com base na análise realizada, recomenda-se a implantação de um **Sistema Inteligente de Gestão de Energia**, com monitoramento em tempo real e controle automatizado das cargas.
 
-Consumo mínimo: 03h–05h
+### 📍 Ações principais
+- **Desligamento automático** de equipamentos não essenciais fora do expediente
+- **Programação de cargas** para horários fora de pico
+- **Alertas automáticos** quando o consumo exceder o limite estabelecido
+- **Painel de monitoramento (dashboard)** para acompanhamento contínuo
+- Futuras integrações com **IoT e automação industrial**
 
-Consumo máximo: 18h–20h (pico absoluto)
+---
 
-3.2 Diferença entre dias úteis e finais de semana
+## 📈 6. Simulação de impacto econômico e ambiental
+Redução simulada de **15%** nos horários classificados como pico resultaria em:
 
-Dias úteis possuem maior carga durante o horário comercial
+| Métrica | Resultado |
+|---------|-----------|
+| Energia economizada | **4.538.289.484,69 kWh** |
+| Economia financeira estimada | **R$ 4.084.460.536,22** |
+| Redução de emissões | **453.828.948,47 kg CO₂** |
+| Picos mitigados | **568 eventos** |
 
-Final de semana mantém consumo alto durante o período noturno → indicativo de desperdício energético
+---
 
-3.3 Detecção de picos
-Indicador	Valor
-Picos detectados	568 eventos
-Horário com maior concentração de picos	18h–21h
-4. Simulação de Otimização
+## 🌱 7. Conexão com o Futuro do Trabalho
+Este projeto reforça a importância da **Ciência de Dados aplicada ao setor energético**, habilidade essencial em um mercado que exige eficiência, automação, inovação e responsabilidade ambiental.  
+Profissionais capazes de interpretar dados e implementar soluções sustentáveis têm vantagem competitiva na economia atual, alinhados às tendências de ESG e transição energética.
 
-Foi simulada uma redução de 15% do consumo apenas nos horários classificados como pico (ações simples como automação, desligamento programado e redistribuição de cargas).
+---
 
-Impacto estimado:
-Métrica	Resultado
-Energia economizada	4.538.289.484,69 kWh
-Economia financeira	R$ 4.084.460.536,22
-Redução de emissões	453.828.948,47 kg CO₂
-5. Proposta de Solução Final
+## 🔗 8. Fonte dos Dados
+Dados públicos disponíveis pelo ONS – Operador Nacional do Sistema Elétrico:
 
-Com base nos resultados, a solução proposta consiste na implementação de um Sistema Inteligente de Gestão de Energia, envolvendo:
+🔗 https://huggingface.co/datasets/SamuelM0422/Hourly-Electricity-Demand-Brazil-Dataset
 
-Ações principais
+Dataset analisado: *Hourly-Electricity-Demand-Brazil-Dataset*
 
-Desligamento automático de equipamentos não essenciais fora do horário comercial
+---
 
-Redistribuição de cargas para horários fora de pico
+## 🧾 9. Conclusão
+A análise demonstrou que pequenas intervenções estratégicas podem gerar impactos enormes tanto financeiros quanto ambientais. A implantação de políticas e tecnologias de gestão inteligente de energia pode reduzir custos, promover sustentabilidade e melhorar o desempenho de empresas e instituições.
 
-Monitoramento contínuo de consumo por meio de dashboards
+A tomada de decisão baseada em dados é uma competência fundamental para o futuro, e projetos como este mostram como tecnologia e sustentabilidade devem caminhar juntas.
 
-Alertas automáticos em caso de pico
-
-Futuras integrações com IoT e automação industrial
-
-6. Benefícios Esperados
-Benefício	Descrição
-Economia financeira significativa	Redução direta em tarifas de energia
-Sustentabilidade ambiental	Menor emissão de CO₂
-Eficiência operacional	Controle inteligente baseado em dados
-Conexão com o futuro do trabalho	Competência em Data Science, automação e ESG
-7. Conclusão
-
-A análise demonstra que pequenas mudanças aplicadas de forma estratégica em momentos críticos podem gerar impactos expressivos em economia e sustentabilidade. Ao utilizar dados históricos e técnicas de análise para embasar decisões energéticas, é possível transformar ambientes produtivos, tornando-os mais eficientes, competitivos e conscientes no uso de recursos naturais.
-
-Este projeto evidencia a importância da Ciência de Dados aplicada ao setor energético, mostrando que tecnologia e sustentabilidade caminham juntas no futuro do mercado de trabalho.
-
-8. Fonte dos Dados
-
-🔗 https://dados.ons.org.br/dataset/carga-e-energia-verificada
-
-📦 Subsistema analisado: Sudeste (SE/CO), ano 2023
+---
