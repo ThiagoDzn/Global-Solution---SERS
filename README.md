@@ -37,6 +37,14 @@ A solução propõe a aplicação de políticas de gerenciamento de carga nos ho
 | Redução de emissões | **453.828.948,47 kg CO₂** |
 
 ---
+### Estrutura do repositório
+### Conteúdo principal
+- **Notebook:** contém todo o processo de preparação, análise e modelagem dos dados.
+- **Dataset tratado:** usado como base para todas as visualizações e cálculos.
+- **Imagens de resultados:** utilizadas no relatório e vídeo de apresentação.
+- **Relatório PDF:** síntese dos resultados e proposta de solução.
+- **README.md:** explicação geral do projeto, execução, tecnologias e aprendizagens.
+---
 
 ## 📚 Fonte dos Dados
 https://huggingface.co/datasets/SamuelM0422/Hourly-Electricity-Demand-Brazil-Dataset?
