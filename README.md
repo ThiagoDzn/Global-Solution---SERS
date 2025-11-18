@@ -1,4 +1,9 @@
 # Global-Solution---SERS
+## 👥 Autores
+
+- **Thiago Cruz da Silva** – RM: 568232  
+- **Lucas Alvarenga Blois de Oliveira** – RM: 567762  
+- **Eduardo Gianisela Pricoli** – RM: 567062  
 
 # 🌎 Global Solution 2025 – Análise de Consumo Energético do Sudeste
 
